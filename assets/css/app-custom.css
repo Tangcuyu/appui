@@ -1386,7 +1386,7 @@ a.card:not(.bg-inverse):hover {
 
 /* Card block */
 .card-block {
-	padding: 24px 24px;
+	padding: 24px 10px;
 }
 
 .card-block:first-child {

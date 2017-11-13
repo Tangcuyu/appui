@@ -355,7 +355,7 @@
                                             <p class="h3 m-t-sm m-b-0">20.9K平方米</p>
                                         </div>
                                         <div class="pull-left m-r">
-                                            <span class="img-avatar img-avatar-48 bg-gray-light-o"><i class="ion-ios-email fa-1-5x"></i></span>
+                                            <span class="img-avatar img-avatar-48 bg-blue"><i class="ion-ios-checkmark fa-1-5x"></i></span>
                                         </div>
                                     </div>
                                 </a>
@@ -388,43 +388,6 @@
                         <!-- .row -->
 
                         <div class="row">
-
-                            <div class="col-lg-4">
-                                <!-- Weekly users Widget -->
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Weekly users</h4>
-                                        <ul class="card-actions">
-                                            <li class="dropdown">
-                                                <button type="button" data-toggle="dropdown"><i class="ion-more"></i></button>
-                                                <ul class="dropdown-menu dropdown-menu-right">
-                                                    <li class="dropdown-header">Profile</li>
-                                                    <li>
-                                                        <a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span> News</a>
-                                                    </li>
-                                                    <li>
-                                                        <a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span> Messages</a>
-                                                    </li>
-                                                    <li class="divider"></li>
-                                                    <li class="dropdown-header">More</li>
-                                                    <li>
-                                                        <a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-block">
-                                        <div style="height: 238px;"><canvas class="js-chartjs-bars"></canvas></div>
-                                    </div>
-                                    <div class="card-block text-center">
-                                        <span class="label bg-green m-r-xs">Statistics <i class="ion-connection-bars"></i></span> <small>for the <a href="javascript:void(0)">last year</a></small>
-                                    </div>
-                                </div>
-                                <!-- .card -->
-                                <!-- End Weekly users Widget -->
-                            </div>
-                            <!-- .col-lg-4 -->
 
                             <div class="col-lg-8">
                                 <!-- Transactions history Widget -->
@@ -462,6 +425,47 @@
                                 <!-- End Transactions history Widget -->
                             </div>
                             <!-- .col-lg-8 -->
+
+                            <!-- Tag Cloud Widget -->
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>污染物标签云</h4>
+                                        <ul class="card-actions">
+                                            <li class="dropdown">
+                                                <button type="button" data-toggle="dropdown"><i class="ion-more"></i></button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-header">Profile</li>
+                                                    <li>
+                                                        <a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span> News</a>
+                                                    </li>
+                                                    <li>
+                                                        <a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span> Messages</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li class="dropdown-header">More</li>
+                                                    <li>
+                                                        <a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- .card-actions -->
+                                    </div>
+                                    <!-- .card-header -->
+                                    <div class="card-block p-b-0">
+                                        <div id="tag-cloud" style="height: 268px;">
+
+                                        </div>
+                                    </div>
+                                    <div class="card-block text-center">
+                                        <small>天津市<a href="javascript:void(0)"> 污染地块</a></small>
+                                        <span class="label bg-green m-r-xs">主要污染物</span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- .col-lg-4 -->
+                            <!-- End Tag Cloud Widget -->
                         </div>
                         <!-- .row -->
 
@@ -522,7 +526,7 @@
                             </div>
                             <!-- .col-lg-8 -->
 
-                            <!-- Server load Widget -->
+                              <!-- Server load Widget -->
                             <div class="col-lg-4">
                                 <div class="card">
                                     <div class="card-header bg-purple bg-inverse">
@@ -540,7 +544,7 @@
                                 </div>
                                 <!-- .card -->
                             </div>
-                            <!-- End Server load Widget // .col-lg-4 -->
+                            <!-- End Server load Widget // .col-lg-4 -->   
                         </div>
                         <!-- .row -->
                     </div>
@@ -615,6 +619,10 @@
         <!-- Page JS Plugins -->
         <script src="assets/js/plugins/chartjs/Chart.min.js" ></script>
 
+        <!-- Page JS Plugins tagcloud -->
+        <script src="assets/js/plugins/svg3dtagcloud/jquery.svg3dtagcloud.js"></script>
+        <script src="assets/js/plugins/svg3dtagcloud/tagcloud.js"></script>
+
 
         <!-- Page JS Code -->
         <script src="assets/js/pages/index.js" ></script>
@@ -626,6 +634,8 @@
                 // Init page helpers (Slick Slider plugin)
                 App.initHelpers('slick');
             });
+
+            $( '#tag-cloud' ).svg3DTagCloud( settings );
         </script>
 
     </body>
