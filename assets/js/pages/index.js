@@ -9,8 +9,8 @@ var BasePagesDashboard = function() {
 	var initDashChartJS = function() {
 
 		// Get Chart Containers
-		var $dashChartLinesCnt1 = jQuery( '.js-chartjs-lines1' )[0].getContext( '2d' ),
-			$dashChartLinesCnt2 = jQuery( '.js-chartjs-lines2' )[0].getContext( '2d' ),
+		var //$dashChartLinesCnt1 = jQuery( '.js-chartjs-lines1' )[0].getContext( '2d' ),
+			// $dashChartLinesCnt2 = jQuery( '.js-chartjs-lines2' )[0].getContext( '2d' ),
 			$dashChartBarsCnt = jQuery( '.js-chartjs-bars' )[0].getContext( '2d' ),
 			$dashChartLinesCnt3 = jQuery( '.js-chartjs-lines3' )[0].getContext( '2d' ),
 			$dashChartLinesCnt4 = jQuery( '.js-chartjs-lines4' )[0].getContext( '2d' ),
@@ -24,8 +24,35 @@ var BasePagesDashboard = function() {
 			tooltipCornerRadius: 2,
 			maintainAspectRatio: false,
 			responsive: true,
-			animation: false,
-			pointDotStrokeWidth: 2,
+			animation: true,
+			pointDotStrokeWidth: 4,
+		};
+
+		// Lines/Bar/Radar Chart Data
+		var $chartLinesBarsRadarData = {
+			labels: ['和平区', '南开区', '河西区', '河东区', '河北区', '红桥区', '北辰区', '东丽区', '西青区', '津南区', '武清区', '宝坻区', '滨海新区', '静海县', '宁河县', '蓟县'],
+			datasets: [{
+				label: 'Last Week',
+				fillColor: App.hexToRgba( App.colors.blue, 20 ),
+				strokeColor: App.hexToRgba( App.colors.blue, 40 ),
+				pointColor: App.hexToRgba( App.colors.blue, 40 ),
+				pointStrokeColor: '#fff',
+				data: [30, 32, 40, 45, 43, 38, 55, 30, 32, 40, 45, 43, 38, 55, 43, 20]
+			}, {
+				label: 'This Week',
+				fillColor: App.hexToRgba( App.colors.blue, 70 ),
+				strokeColor: App.colors.blue,
+				pointColor: App.colors.blue,
+				pointStrokeColor: '#fff',
+				data: [15, 16, 20, 25, 23, 25, 32, 30, 32, 40, 45, 43, 38, 55, 11, 33]
+			},{
+				label: 'This Week',
+				fillColor: App.hexToRgba( App.colors.blue, 70 ),
+				strokeColor: App.colors.green,
+				pointColor: App.colors.green,
+				pointStrokeColor: '#fff',
+				data: [15, 16, 20, 25, 23, 25, 32, 30, 32, 40, 45, 43, 38, 55, 23, 20]
+			}]
 		};
 
 		// Lines Chart Data 1
@@ -161,13 +188,13 @@ var BasePagesDashboard = function() {
 		};
 
 		// Init Lines Chart
-		$dashChartLines = new Chart( $dashChartLinesCnt1 ).Line( $dashChartLinesData, $globalOptions );
+		// $dashChartLines = new Chart( $dashChartLinesCnt1 ).Line( $dashChartLinesData, $globalOptions );
 
 		// Init Lines Chart 2
-		$dashChartLines2 = new Chart( $dashChartLinesCnt2 ).Line( $dashChartLinesData2, $globalOptions );
+		// $dashChartLines2 = new Chart( $dashChartLinesCnt2 ).Line( $dashChartLinesData2, $globalOptions );
 
 		// Init Lines Chart Bars
-		$dashChartBars = new Chart( $dashChartBarsCnt ).Bar( $dashChartLinesData3, {
+		$dashChartBars = new Chart( $dashChartBarsCnt ).Bar( $chartLinesBarsRadarData, {
 			scaleBeginAtZero: false,
 			scaleShowVerticalLines: false,
 			barShowStroke: false,
@@ -177,7 +204,7 @@ var BasePagesDashboard = function() {
 			tooltipCornerRadius: 2,
 			maintainAspectRatio: false,
 			responsive: true,
-			animation: false,
+			animation: true,
 		});
 
 		// Init Lines Chart 4

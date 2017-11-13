@@ -9,7 +9,7 @@ var BaseJsCharts = function() {
 	var initChartsChartJS = function() {
 
 		// Get Chart Containers
-		var $chartLinesCnt = jQuery( '.js-chartjs-lines' )[0].getContext( '2d' ),
+		var $chartLinesCnt = jQuery( '.js-chartjs-lines2' )[0].getContext( '2d' ),
 			$chartBarsCnt = jQuery( '.js-chartjs-bars' )[0].getContext( '2d' ),
 			$chartRadarCnt = jQuery( '.js-chartjs-radar' )[0].getContext( '2d' ),
 			$chartPolarCnt = jQuery( '.js-chartjs-polar' )[0].getContext( '2d' ),
