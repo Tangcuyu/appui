@@ -1,22 +1,22 @@
 /* 建立污染物标签云*/
 
 var entries = [ 
-                { label: '重金属', url: 'http://codepen.io/', target: '_top' },
-                { label: '苯并比', url: 'http://threejs.org/', target: '_top' },
-                { label: 'JS Compress', url: 'http://jscompress.com/', target: '_top' },
-                { label: '酚类', url: 'https://tinypng.com/', target: '_top' },
-                { label: 'Can I Use', url: 'http://caniuse.com/', target: '_top' },
-                { label: 'URL shortener', url: 'https://goo.gl/', target: '_top' },
-                { label: 'Twitter', url: 'https://twitter.com/', target: '_top' },
-                { label: 'Gulp', url: 'http://gulpjs.com/', target: '_top' },
-                { label: 'Browsersync', url: 'https://www.browsersync.io/', target: '_top' },
-                { label: 'GitHub', url: 'https://github.com/', target: '_top' },
-                { label: 'Shadertoy', url: 'https://www.shadertoy.com/', target: '_top' },
-                { label: 'jsPerf', url: 'http://jsperf.com/', target: '_top' },
-                { label: 'Foundation', url: 'http://foundation.zurb.com/', target: '_top' },
-                { label: 'CreateJS', url: 'http://createjs.com/', target: '_top' },
-                { label: 'Velocity.js', url: 'http://julian.com/research/velocity/', target: '_top' },
-                { label: 'jQuery', url: 'https://jquery.com/', target: '_top' },
+                { label: '重金属:汞', url: 'http://codepen.io/', target: '_top' },
+                { label: '有机物:苯并比', url: 'http://threejs.org/', target: '_top' },
+                { label: '重金属:镉', url: 'http://jscompress.com/', target: '_top' },
+                { label: '有机物:酚类', url: 'https://tinypng.com/', target: '_top' },
+                { label: '有机磷类:对硫磷', url: 'http://caniuse.com/', target: '_top' },
+                { label: '重金属:铅', url: 'https://goo.gl/', target: '_top' },
+                { label: '重金属:铬', url: 'https://twitter.com/', target: '_top' },
+                { label: '化学肥料', url: 'http://gulpjs.com/', target: '_top' },
+                { label: '致病微生物', url: 'https://www.browsersync.io/', target: '_top' },
+                { label: '石灰', url: 'https://github.com/', target: '_top' },
+                { label: '水泥', url: 'https://www.shadertoy.com/', target: '_top' },
+                { label: '涂料和油漆', url: 'http://jsperf.com/', target: '_top' },
+                { label: '放射性物质', url: 'http://foundation.zurb.com/', target: '_top' },
+                { label: '有机氯类', url: 'http://createjs.com/', target: '_top' },
+                { label: '苯氧羧酸类', url: 'http://julian.com/research/velocity/', target: '_top' },
+                { label: '氨基甲酸酯类', url: 'https://jquery.com/', target: '_top' },
             ];     
 
 var settings = {
